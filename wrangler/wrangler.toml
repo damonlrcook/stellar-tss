@@ -1,4 +1,4 @@
-name = "Change Me"
+name = "CHANGE ME"
 type = "javascript"
 usage_model = "bundled"
 webpack_config = "webpack.config.js"
