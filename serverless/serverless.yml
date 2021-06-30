@@ -1,5 +1,5 @@
-org: tyvdh
-app: tss-serverless
+org: CHANGE TO YOUR ORGANISATION ID
+app: CHANGE TO tss-NETWORK-IDENTIFIER (FOLLOW NAMING CONVENTIONS)
 service: tss-serverless
 
 package:
@@ -12,8 +12,8 @@ provider:
   name: aws
   runtime: nodejs12.x
   environment:
-    turretBaseUrl: 'https://tss-wrangler.tyler.workers.dev'
-    turretSigner: GB4OYM7TQTJSROWXHOJLKAX2IJ2QN4I6S6GCJH4MGWVTAO5Q5DPNADXX
+    turretBaseUrl: 'INSERT THE URL FOR THE CLOUDFLARE WORKER'
+    turretSigner: CHANGE ME TO YOUR TURRET PUBLIC KEY
   tracing:
     lambda: true
   iamRoleStatements:
