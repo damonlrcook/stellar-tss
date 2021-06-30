@@ -1,10 +1,10 @@
-# Task.io installation notes and observations
+# Task.io Installation Notes and Observations
 We’re using this file to note down tweaks to installation processes as well as conventions we plan to use as we roll this out.
 
 This can be combined with the main repo files if the community finds it useful.
 
-## Notes on installation process
-Some aspects of the installation process are not the easiest to understand for a first attempt with fresh accounts in AWS, Cloudflare and Serverless. This section aims to clear up certain parts of the installation process to enable an easier understanding of the reference implementation.
+# Notes on installation process
+Some aspects of the installation process are not the easiest to understand for a first attempt with fresh accounts in AWS, Cloudflare and Serverless. This section aims to clear up certain parts of the installation process to enable an easier understanding of the reference implementation. Each section below relates to files or actions that the reference implementation requests are completed to enable a fully function turret.
 
 ### wrangler.toml
 This file requires multiple changes to certain values within the file to enable the turret to be set up. The reference implentation documents the changes to this document and there are no extra steps that are documented in the intial setup of the wrangler directory.
@@ -34,6 +34,9 @@ The reference implementation fails to mention the need to adjust values within t
     org: YOUR-ORGANISATION
     app: tss-NETWORK-IDENTIFIER
     service: tss-serverless
+
+### Runner URL
+The `$ npm run deploy` command that is run within the `/serverless` directorty returns information relating to the established turret. One part of the information is the endpoint URL that is to be used. While the reference implementation points to the endpoint URL it is not clear which one. While there is small differences the value to use is the `GET:` URL. This URL is then to be taken and placed within the `wrangler.toml` file specificaly where it defines the `TURRET_RUN_URL` value within `vars`.
 
 # Naming Conventions
 ## Turrets
